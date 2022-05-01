@@ -5,11 +5,17 @@
 template<typename T>
 class TPQueue {
  private:
-struct ITEM {
-     T value;
-     ITEM* next;
+  struct ITEM {
+    T data;
+    ITEM* next;
   };
-  ITEM* first, * last;
+  ITEM* head;
+  ITEM* tail;
+  TPQueue::ITEM* create(const T& value) {
+    ITEM* it = new ITEM;
+    it->data = value;
+    it->next = nullptr;
+    return it;
 }
   
   public:
