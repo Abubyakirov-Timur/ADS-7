@@ -6,14 +6,14 @@ template<typename T>
 class TPQueue {
  private:
   struct ITEM {
-    T data;
+    T tim;
     ITEM* next;
   };
   ITEM* head;
   ITEM* tail;
   TPQueue::ITEM* create(const T& value) {
     ITEM* it = new ITEM;
-    it->data = value;
+    it->tim = data;
     it->next = nullptr;
     return it;
   }
@@ -24,12 +24,12 @@ class TPQueue {
     if (head) {
       ITEM* temp = head;
       head = head->next;
-      return temp->data;
+      return temp->tim;
     }
-    T tmp;
+    T value;
     tmp.prior = 0;
     tmp.ch = ' ';
-    return tmp;
+    return value;
   }
   void push(T value) {
     ITEM* tmp = nullptr;
