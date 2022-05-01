@@ -28,7 +28,7 @@ class TPQueue {
     }
     T value;
     value.prior = 0;
-    tmp.ch = ' ';
+    value.ch = ' ';
     return value;
   }
   void push(T value) {
