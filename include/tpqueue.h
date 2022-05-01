@@ -15,9 +15,9 @@ class TPQueue {
     ITEM* it = new ITEM;
     it->data = value;
     it->next = nullptr;
-   return it;
+    return it;
   }
-  
+ 
  public:
   TPQueue() :head(nullptr), tail(nullptr) {}
    T pop() {
