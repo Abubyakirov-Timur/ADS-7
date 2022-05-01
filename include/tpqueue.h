@@ -13,7 +13,7 @@ class TPQueue {
   ITEM* tail;
   TPQueue::ITEM* create(const T& value) {
     ITEM* it = new ITEM;
-    it->tim = tim;
+    it->tim = value;
     it->next = nullptr;
     return it;
   }
