@@ -13,7 +13,7 @@ class TPQueue {
   ITEM* tail;
   TPQueue::ITEM* create(const T& value) {
     ITEM* it = new ITEM;
-    it->tim = data;
+    it->tim = tim;
     it->next = nullptr;
     return it;
   }
@@ -27,7 +27,7 @@ class TPQueue {
       return temp->tim;
     }
     T value;
-    tmp.prior = 0;
+    value.prior = 0;
     tmp.ch = ' ';
     return value;
   }
@@ -36,17 +36,17 @@ class TPQueue {
     ITEM* it = create(value);
     ITEM* temp = head;
     if (head && tail) {
-       while (temp && (temp->data).prior >= value.prior) {
+       while (temp && (temp->tim).prior >= value.prior) {
          tmp = temp;
          temp = temp->next;
        }
-       if (temp == head && ((head->data).prior == (it->data).prior)) {
+       if (temp == head && ((head->tim).prior == (it->tim).prior)) {
          it->next = head->next;
          head->next = it;
-       } else if (temp == head && ((head->data).prior >= (it->data).prior)) {
+       } else if (temp == head && ((head->tim).prior >= (it->tim).prior)) {
          it->next = head->next;
          head->next = it;
-       } else if (temp == head && ((head->data).prior < (it->data).prior)) {
+       } else if (temp == head && ((head->tim).prior < (it->tim).prior)) {
          it->next = head;
          head = it;
        } else if (!temp) {
